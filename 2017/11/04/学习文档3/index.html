@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">MICCALL</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/miccall" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Zepto学习3</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="学习文档3"><a href="#学习文档3" class="headerlink" title="学习文档3"></a>学习文档3</h1><h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2><blockquote>
+<p>css(property)   ⇒ value<br>css([property1, property2, …])   ⇒ object v1.1+<br>css(property, value)   ⇒ self<br>css({ property: value, property2: value2, … })   ⇒ self   </p>
+</blockquote>
+<p>读取或设置DOM元素的css属性。<br>当value参数不存在的时候，返回对象集合中第一个元素的css属性。<br>当value参数存在时，设置对象集合中每一个元素的对应css属性。   </p>
+<p>多个属性可以通过传递一个属性名组成的数组一次性获取。多个属性可以利用对象键值对的方式进行设置。</p>
+<p>当value为空(空字符串，null 或 undefined)，那个css属性将会被移出。<br>当value参数为一个无单位的数字，如果该css属性需要单位，“px”将会自动添加到该属性上。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> elem = $(<span class="string">'h1'</span>)</div><div class="line">elem.css(<span class="string">'background-color'</span>)          <span class="comment">// read property</span></div><div class="line">elem.css(<span class="string">'background-color'</span>, <span class="string">'#369'</span>)  <span class="comment">// set property</span></div><div class="line">elem.css(<span class="string">'background-color'</span>, <span class="string">''</span>)      <span class="comment">// remove property</span></div><div class="line"></div><div class="line"><span class="comment">// set multiple properties:设置多个属性:</span></div><div class="line">elem.css(&#123; <span class="attr">backgroundColor</span>: <span class="string">'#8EE'</span>, <span class="attr">fontSize</span>: <span class="number">28</span> &#125;)</div><div class="line"></div><div class="line"><span class="comment">// read multiple properties:</span></div><div class="line">elem.css([<span class="string">'backgroundColor'</span>, <span class="string">'fontSize'</span>])[<span class="string">'fontSize'</span>]</div></pre></td></tr></table></figure>
+<h2 id="data"><a href="#data" class="headerlink" title="data"></a>data</h2><blockquote>
+<p>data(name)   ⇒ value<br>data(name, value)   ⇒ self  </p>
+</blockquote>
+<p>读取或写入dom的 data-* 属性。行为有点像 attr ，但是属性名称前面加上 data-。</p>
+<p>当读取属性值时，会有下列转换：v1.0+</p>
+<ul>
+<li>“true”, “false”, and “null” 被转换为相应的类型；</li>
+<li>数字值转换为实际的数字类型；</li>
+<li>JSON值将会被解析，如果它是有效的JSON；</li>
+<li>其它的一切作为字符串返回。</li>
+</ul>
+<p>Zepto 基本实现<code>data()</code>只能存储字符串。如果你要存储任意对象，请引入可选的“data”模块到你构建的Zepto中。</p>
+<h2 id="each"><a href="#each" class="headerlink" title="each"></a>each</h2><blockquote>
+<p>each(function(index, item){ … })   ⇒ self<br>遍历一个对象集合每个元素。在迭代函数中，this关键字指向当前项(作为函数的第二个参数传递)。如果迭代函数返回 false，遍历结束。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'form input'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">index</span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'input %d is: %o'</span>, index, <span class="keyword">this</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="empty"><a href="#empty" class="headerlink" title="empty"></a>empty</h2><blockquote>
+<p>empty()   ⇒ self<br>清空对象集合中每个元素的DOM内容。</p>
+</blockquote>
+<h2 id="eq"><a href="#eq" class="headerlink" title="eq"></a>eq</h2><blockquote>
+<p>eq(index)   ⇒ collection  </p>
+</blockquote>
+<p>从当前对象集合中获取给定索引值（愚人码头注：以0为基数）的元素。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$(<span class="string">'li'</span>).eq(<span class="number">0</span>)   <span class="comment">//=&gt; only the first list item</span></div><div class="line">$(<span class="string">'li'</span>).eq(<span class="number">-1</span>)  <span class="comment">//=&gt; only the last list item</span></div></pre></td></tr></table></figure></p>
+<h2 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h2><blockquote>
+<p>filter(selector)   ⇒ collection<br>filter(function(index){ … })   ⇒ collection v1.0+</p>
+</blockquote>
+<ul>
+<li>过滤对象集合，返回对象集合中满足css选择器的项。   </li>
+<li>如果参数为一个函数，函数返回有实际值得时候，元素才会被返回。  </li>
+<li>在函数中， this 关键字指向当前的元素。</li>
+</ul>
+<p>与此相反的功能，查看not.</p>
+<h2 id="find"><a href="#find" class="headerlink" title="find"></a>find</h2><blockquote>
+<p>find(selector)   ⇒ collection<br>find(collection)   ⇒ collection v1.0+<br>find(element)   ⇒ collection v1.0+  </p>
+</blockquote>
+<p>在当对象前集合内查找符合CSS选择器的每个元素的后代元素。</p>
+<p>如果给定Zepto对象集合或者元素，过滤它们，只有当它们在当前Zepto集合对象中时，才回被返回。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> form = $(<span class="string">'#myform'</span>)</div><div class="line">form.find(<span class="string">'input, select'</span>)</div></pre></td></tr></table></figure>
+<h2 id="first"><a href="#first" class="headerlink" title="first"></a>first</h2><blockquote>
+<p>first()   ⇒ collection<br>获取当前对象集合中的第一个元素。</p>
+<ul>
+<li>$(‘form’).first()</li>
+</ul>
+</blockquote>
+<h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h2><blockquote>
+<p>forEach(function(item, index, array){ … }, [context])  </p>
+</blockquote>
+<p>遍历对象集合中每个元素，有点类似 each，但是遍历函数的参数不一样，当函数返回 false 的时候，遍历不会停止。</p>
+<blockquote>
+<p>这是一个Zepto提供的方法，不是jquery的API。</p>
+</blockquote>
+<h2 id="get"><a href="#get" class="headerlink" title="get"></a>get</h2><blockquote>
+<p>get()   ⇒ array<br>get(index)   ⇒ DOM node</p>
+</blockquote>
+<p>从当前对象集合中获取所有元素或单个元素。</p>
+<ul>
+<li>当index参数不存在的时，以普通数组的方式返回所有的元素。</li>
+<li>当指定index时，只返回该置的元素。</li>
+<li>这点与eq不同，该方法返回的是DOM节点，不是Zepto对象集合。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> elements = $(<span class="string">'h2'</span>)</div><div class="line">elements.get()   <span class="comment">//=&gt; get all headings as an array</span></div><div class="line">elements.get(<span class="number">0</span>)  <span class="comment">//=&gt; get first heading node</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="has-v1-0"><a href="#has-v1-0" class="headerlink" title="has v1.0+"></a>has v1.0+</h2><blockquote>
+<p>has(selector)   ⇒ collection<br>has(node)   ⇒ collection    </p>
+</blockquote>
+<ul>
+<li>判断当前对象集合的子元素是否有符合选择器的元素，或者是否包含指定的DOM节点，</li>
+<li>如果有，则返回新的对象集合，该对象过滤掉不含有选择器匹配元素或者不含有指定DOM节点的对象。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$(<span class="string">'ol &gt; li'</span>).has(<span class="string">'a[href]'</span>)</div><div class="line"><span class="comment">//=&gt; get only LI elements that contain links</span></div><div class="line"></div><div class="line">## hasClass</div><div class="line">&gt; hasClass(name)   ⇒ boolean</div><div class="line"></div><div class="line">检查对象集合中是否有元素含有指定的<span class="class"><span class="keyword">class</span>。</span></div><div class="line"><span class="class">```<span class="title">html</span></span></div><div class="line"><span class="class">&lt;<span class="title">ul</span>&gt;</span></div><div class="line"><span class="class">    &lt;<span class="title">li</span>&gt;<span class="title">list</span> <span class="title">item</span> 1&lt;/<span class="title">li</span>&gt;</span></div><div class="line"><span class="class">    &lt;<span class="title">li</span> <span class="title">class</span></span>=<span class="string">"yaotaiyang"</span>&gt;list item <span class="number">2</span>&lt;<span class="regexp">/li&gt;</span></div><div class="line"><span class="regexp">    &lt;li&gt;list item 3&lt;/</span>li&gt;</div><div class="line">&lt;<span class="regexp">/ul&gt;</span></div><div class="line"><span class="regexp">&lt;p&gt;a paragraph&lt;/</span>p&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">    $(<span class="string">"li"</span>).hasClass(<span class="string">"yaotaiyang"</span>);</div><div class="line">  <span class="comment">//=&gt; true</span></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="height"><a href="#height" class="headerlink" title="height"></a>height</h2><blockquote>
+<p>height()   ⇒ number<br>height(value)   ⇒ self<br>height(function(index, oldHeight){ … })   ⇒ self  </p>
+</blockquote>
+<p>获取对象集合中第一个元素的高度；或者设置对象集合中所有元素的高度。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#foo'</span>).height()   <span class="comment">// =&gt; 123</span></div><div class="line">$(<span class="built_in">window</span>).height()   <span class="comment">// =&gt; 838 (viewport height)</span></div><div class="line">$(<span class="built_in">document</span>).height() <span class="comment">// =&gt; 22302</span></div></pre></td></tr></table></figure></p>
+<h2 id="hide"><a href="#hide" class="headerlink" title="hide"></a>hide</h2><blockquote>
+<p>hide()   ⇒ self</p>
+</blockquote>
+<p>Hide elements in this collection by setting their display CSS property to none.</p>
+<p>通过设置css的属性display 为 none来将对象集合中的元素隐藏。</p>
+<h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><blockquote>
+<p>html()   ⇒ string<br>html(content)   ⇒ self<br>html(function(index, oldHtml){ … })   ⇒ self</p>
+</blockquote>
+<p>获取或设置对象集合中元素的HTML内容。</p>
+<ul>
+<li>当没有给定content参数时，返回对象集合中第一个元素的innerHtml。</li>
+<li>当给定content参数时，用其替换对象集合中每个元素的内容。</li>
+<li>content可以是append中描述的所有类型。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">// autolink everything that looks like a Twitter username</span></div><div class="line">$(<span class="string">'.comment p'</span>).html(<span class="function"><span class="keyword">function</span>(<span class="params">idx, oldHtml</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> oldHtml.replace(<span class="regexp">/(^|\W)@(\w&#123;1,15&#125;)/g</span>,</div><div class="line">    <span class="string">'$1@&lt;a href="http://twitter.com/$2"&gt;$2&lt;/a&gt;'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="index"><a href="#index" class="headerlink" title="index"></a>index</h2><blockquote>
+<p>index([element])   ⇒ number</p>
+</blockquote>
+<p>获取一个元素的索引值（愚人码头注：从0开始计数）。</p>
+<ul>
+<li>当elemen参数没有给出时，返回当前元素在兄弟节点中的位置。</li>
+<li>当element参数给出时，返回它在当前对象集合中的位置。</li>
+<li>如果没有找到该元素，则返回-1。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$(<span class="string">'li:nth-child(2)'</span>).index()  <span class="comment">//=&gt; 1</span></div></pre></td></tr></table></figure>
+<h2 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h2><blockquote>
+<p>indexOf(element, [fromIndex])   ⇒ number</p>
+</blockquote>
+<p>在当前对象集合中获取一个元素的索引值（愚人码头注：从0开始计数）。</p>
+<ul>
+<li>如果给定formindex参数，从该位置开始往后查找，返回基于0的索引值，</li>
+<li>如果没找到，则返回-1。</li>
+</ul>
+<p>index 方法是基于这个方法实现的。</p>
+<p>这是一个Zepto的方法，不是jquer的api。</p>
+<h2 id="insertAfter"><a href="#insertAfter" class="headerlink" title="insertAfter"></a>insertAfter</h2><blockquote>
+<p>insertAfter(target)   ⇒ self</p>
+</blockquote>
+<p>将集合中的元素插入到指定的目标元素后面（愚人码头注：外部插入）。<br>这个有点像 after，但是使用方式相反。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'&lt;p&gt;Emphasis mine.&lt;/p&gt;'</span>).insertAfter(<span class="string">'blockquote'</span>)</div></pre></td></tr></table></figure></p>
+<h2 id="insertBefore"><a href="#insertBefore" class="headerlink" title="insertBefore"></a>insertBefore</h2><blockquote>
+<p>insertBefore(target)   ⇒ self</p>
+</blockquote>
+<p>将集合中的元素插入到指定的目标元素前面（愚人码头注：外部插入）。这个有点像 before，但是使用方式相反。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'&lt;p&gt;See the following table:&lt;/p&gt;'</span>).insertBefore(<span class="string">'table'</span>)</div></pre></td></tr></table></figure></p>
+<h2 id="is"><a href="#is" class="headerlink" title="is"></a>is</h2><blockquote>
+<p>is(selector)   ⇒ boolean</p>
+</blockquote>
+<p>判断当前元素集合中的第一个元素是否符css选择器。对于基础支持jquery的非标准选择器类似： :visible包含在可选的“selector”模块中。</p>
+<p> jQuery CSS extensions 不被支持。 选择“selector”模块仅仅能支持有限几个最常用的方式。</p>
+<h2 id="last"><a href="#last" class="headerlink" title="last"></a>last</h2><blockquote>
+<p>last()   ⇒ collection </p>
+</blockquote>
+<p>获取对象集合中最后一个元素。</p>
+<pre><code>$(&apos;li&apos;).last()
+</code></pre><h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><blockquote>
+<p>map(function(index, item){ … })   ⇒ collection</p>
+</blockquote>
+<ul>
+<li>遍历对象集合中的所有元素。通过遍历函数返回值形成一个新的集合对象。   </li>
+<li><p>在遍历函数中this关键之指向当前循环的项（遍历函数中的第二个参数）。</p>
+</li>
+<li><p>遍历中返回 null和undefined，遍历将结束。</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">elements.map(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="keyword">return</span> $(<span class="keyword">this</span>).text() &#125;).get().join(<span class="string">', '</span>)</div></pre></td></tr></table></figure>
+<h2 id="next"><a href="#next" class="headerlink" title="next"></a>next</h2><blockquote>
+<p>next()   ⇒ collection<br>next(selector)   ⇒ collection v1.0+ </p>
+</blockquote>
+<ul>
+<li>获取对象集合中每一个元素的下一个兄弟节点(可以选择性的带上过滤选择器)。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'dl dt'</span>).next()   <span class="comment">//=&gt; the DD elements</span></div></pre></td></tr></table></figure>
+<h2 id="not"><a href="#not" class="headerlink" title="not"></a>not</h2><blockquote>
+<p>not(selector)   ⇒ collection<br>not(collection)   ⇒ collection<br>not(function(index){ … })   ⇒ collection  </p>
+</blockquote>
+<ul>
+<li>过滤当前对象集合，获取一个新的对象集合，它里面的元素不能匹配css选择器。</li>
+<li>如果另一个参数为Zepto对象集合，那么返回的新Zepto对象中的元素都不包含在该参数对象中。</li>
+<li>如果参数是一个函数。仅仅包含函数执行为false值得时候的元素，函数的 this 关键字指向当前循环元素。</li>
+</ul>
+<p>与它相反的功能，查看 filter.</p>
+<h2 id="parent"><a href="#parent" class="headerlink" title="parent"></a>parent</h2><blockquote>
+<p>parent([selector])   ⇒ collection</p>
+</blockquote>
+<p>获取对象集合中每个元素的直接父元素。如果css选择器参数给出。过滤出符合条件的元素。</p>
+<h2 id="parents"><a href="#parents" class="headerlink" title="parents"></a>parents</h2><blockquote>
+<p>parents([selector])   ⇒ collection</p>
+</blockquote>
+<ul>
+<li><p>获取对象集合每个元素所有的祖先元素。如果css选择器参数给出，过滤出符合条件的元素。</p>
+</li>
+<li><p>如果想获取直接父级元素，使用 parent。</p>
+</li>
+<li>如果只想获取到第一个符合css选择器的元素，使用closest。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'h1'</span>).parents()   <span class="comment">//=&gt; [&lt;div#container&gt;, &lt;body&gt;, &lt;html&gt;]</span></div></pre></td></tr></table></figure>
+<h2 id="pluck"><a href="#pluck" class="headerlink" title="pluck"></a>pluck</h2><blockquote>
+<p>pluck(property)   ⇒ array</p>
+</blockquote>
+<p>获取对象集合中每一个元素的属性值。返回值为 null或undefined值得过滤掉。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'body &gt; *'</span>).pluck(<span class="string">'nodeName'</span>) <span class="comment">// =&gt; ["DIV", "SCRIPT"]</span></div><div class="line"></div><div class="line"><span class="comment">// implementation of Zepto's `next` method</span></div><div class="line">$.fn.next = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> $(<span class="keyword">this</span>.pluck(<span class="string">'nextElementSibling'</span>))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 这是一个Zepto的方法，不是jquery的api</p>
+<p>prepend<br>prepend(content)   ⇒ self<br>将参数内容插入到每个匹配元素的前面（愚人码头注：元素内部插入）。插入d的元素可以试html字符串片段，一个dom节点，或者一个节点的数组。</p>
+<p>$(‘ul’).prepend(‘<li>first list item</li>‘)<br>prependTo<br>prependTo(target)   ⇒ self<br>将所有元素插入到目标前面（愚人码头注：元素内部插入）。这有点像prepend，但是是相反的方式。</p>
+<p>$(‘<li>first list item</li>‘).prependTo(‘ul’)<br>prev<br>prev()   ⇒ collection<br>prev(selector)   ⇒ collection v1.0+<br>获取对象集合中每一个元素的前一个兄弟节点，通过选择器来进行过滤。</p>
+<p>prop v1.0+<br>prop(name)   ⇒ value<br>prop(name, value)   ⇒ self<br>prop(name, function(index, oldValue){ … })   ⇒ self<br>读取或设置dom元素的属性值。它在读取属性值的情况下优先于 attr，因为这些属性值会因为用户的交互发生改变，如checked 和 selected。</p>
+<p>简写或小写名称，比如for, class, readonly及类似的属性，将被映射到实际的属性上，比如htmlFor, className, readOnly, 等等。</p>
+<p>push<br>push(element, [element2, …])   ⇒ self<br>Add elements to the end of the current collection.</p>
+<p>添加元素到当前对象集合的最后。</p>
+<p> 这是一个zepto的方法，不是jquery的api</p>
+<p>ready<br>ready(function($){ … })   ⇒ self<br>添加一个事件侦听器，当页面DOM加载完毕 “DOMContentLoaded” 事件触发时触发。建议使用 $()来代替这种用法。</p>
+<p>reduce<br>reduce(function(memo, item, index, array){ … }, [initial])   ⇒ value<br>与 Array.reduce有相同的用法，遍历当前对象集合。memo是函数上次的返回值。迭代进行遍历。</p>
+<p> 这是一个zepto的方法，不是jquery的api</p>
+<p>remove<br>remove()   ⇒ self<br>从其父节点中删除当前集合中的元素，有效的从dom中移除。</p>
+<p>removeAttr<br>removeAttr(name)   ⇒ self<br>移除当前对象集合中所有元素的指定属性。</p>
+<p>removeClass<br>removeClass([name])   ⇒ self<br>removeClass(function(index, oldClassName){ … })   ⇒ self<br>移除当前对象集合中所有元素的指定class。如果没有指定name参数，将移出所有的class。多个class参数名称可以利用空格分隔。下例移除了两个class。</p>
+<p><input class="taiyang yueliang" id="check1" type="checkbox" checked="checked"></p>
+<input class="yaotaiyang" id="check2" type="checkbox">
+
+<p><script type="text/javascript"><br>    $(“#check1”).removeClass(“taiyang yueliang”)<br>    //=&gt;[<input class id="check1" type="checkbox" checked="checked">]<br></script><br>removeProp v1.2+<br>removeProp(name)   ⇒ self<br>从集合的每个DOM节点中删除一个属性。这是用JavaScript的delete操作符完成。值得注意的是如果尝试删除DOM的一些内置属性，如className或maxLength，将不会有任何效果，因为浏览器禁止删除这些属性。</p>
+<p>replaceWith<br>replaceWith(content)   ⇒ self<br>用给定的内容替换所有匹配的元素。(包含元素本身)。content参数可以为 before中描述的类型。</p>
+<p>scrollLeft v1.1+<br>scrollLeft()   ⇒ number<br>scrollLeft(value)   ⇒ self<br>获取或设置页面上的滚动元素或者整个窗口向右滚动的像素值。</p>
+<p>scrollTop v1.0+<br>scrollTop()   ⇒ number<br>scrollTop(value)   ⇒ self v1.1+<br>获取或设置页面上的滚动元素或者整个窗口向下滚动的像素值。</p>
+<p>show<br>show()   ⇒ self<br>恢复对象集合中每个元素默认的“display”值。如果你用 hide将元素隐藏，用该属性可以将其显示。相当于去掉了display：none。</p>
+<p>siblings<br>siblings([selector])   ⇒ collection<br>获取对象集合中所有元素的兄弟节点。如果给定CSS选择器参数，过滤出符合选择器的元素。</p>
+<p>size<br>size()   ⇒ number<br>获取对象集合中元素的数量。</p>
+<p>slice<br>slice(start, [end])   ⇒ array<br>提取这个数组array的子集，从start开始，如果给定end，提取从从start开始到end结束的元素，但是不包含end位置的元素。</p>
+<p>text<br>text()   ⇒ string<br>text(content)   ⇒ self<br>text(function(index, oldText){ … })   ⇒ self v1.1.4+<br>获取或者设置所有对象集合中元素的文本内容。当没有给定content参数时，返回当前对象集合中第一个元素的文本内容（包含子节点中的文本内容）。当给定content参数时，使用它替换对象集合中所有元素的文本内容。它有待点似 html，与它不同的是它不能用来获取或设置 HTML。</p>
+<p>toggle<br>toggle([setting])   ⇒ self<br>显示或隐藏匹配元素。如果 setting为true，相当于show 法。如果setting为false。相当于 hide方法。</p>
+<p>var input = $(‘input[type=text]’)<br>$(‘#too_long’).toggle(input.val().length &gt; 140)<br>toggleClass<br>toggleClass(names, [setting])   ⇒ self<br>toggleClass(function(index, oldClassNames){ … }, [setting])   ⇒ self<br>在匹配的元素集合中的每个元素上添加或删除一个或多个样式类。如果class的名称存在则删除它，如果不存在，就添加它。如果 setting的值为真，这个功能类似于 addClass，如果为假，这个功能类似与 removeClass。</p>
+<p>unwrap<br>unwrap()   ⇒ self<br>移除集合中每个元素的直接父节点，并把他们的子元素保留在原来的位置。 基本上，这种方法删除上一的祖先元素，同时保持DOM中的当前元素。</p>
+<p>$(document.body).append(‘<div id="wrapper"><p>Content</p></div>‘)<br>$(‘#wrapper p’).unwrap().parents()  //=&gt; [<body>, <html>]<br>val<br>val()   ⇒ string<br>val(value)   ⇒ self<br>val(function(index, oldValue){ … })   ⇒ self<br>获取或设置匹配元素的值。当没有给定value参数，返回第一个元素的值。如果是<select multiple>标签，则返回一个数组。当给定value参数，那么将设置所有元素的值。</select></html></body></p>
+<p>width<br>width()   ⇒ number<br>width(value)   ⇒ self<br>width(function(index, oldWidth){ … })   ⇒ self<br>获取对象集合中第一个元素的宽；或者设置对象集合中所有元素的宽。</p>
+<p>$(‘#foo’).width()   // =&gt; 123<br>$(window).width()   // =&gt; 768 (viewport width)<br>$(document).width() // =&gt; 768<br>wrap<br>wrap(structure)   ⇒ self<br>wrap(function(index){ … })   ⇒ self v1.0+<br>在每个匹配的元素外层包上一个html元素。structure参数可以是一个单独的元素或者一些嵌套的元素。也可以是一个html字符串片段或者dom节点。还可以是一个生成用来包元素的回调函数，这个函数返回前两种类型的包裹片段。</p>
+<p>需要提醒的是：该方法对于dom中的节点有着很好的支持。如果将wrap() 用在一个新的元素上，然后再将结果插入到document中，此时该方法无效。</p>
+<p>// wrap each button in a separate span:<br>$(‘.buttons a’).wrap(‘<span>‘)</span></p>
+<p>// wrap each code block in a div and pre:<br>$(‘code’).wrap(‘<div class="highlight"><pre></pre></div>‘)</p>
+<p>// wrap all form inputs in a span with classname<br>// corresponding to input type:<br>$(‘input’).wrap(function(index){<br>  return ‘<span class=" + this.type + " field="">‘<br>})<br>//=&gt; <span class="textfield"><input type="text"></span>,<br>//   <span class="searchfield"><input type="search"></span></span></p>
+<p>// WARNING: will not work as expected!<br>$(‘<em>broken</em>‘).wrap(‘<li>‘).appendTo(document.body)<br>// do this instead:<br>$(‘<em>better</em>‘).appendTo(document.body).wrap(‘</li><li>‘)<br>wrapAll<br>wrapAll(structure)   ⇒ self<br>在所有匹配元素外面包一个单独的结构。结构可以是单个元素或 几个嵌套的元素，并且可以通过在作为HTML字符串或DOM节点。</li></p>
+<p>// wrap all buttons in a single div:<br>$(‘a.button’).wrapAll(‘<div id="buttons">‘)<br>wrapInner<br>wrapInner(structure)   ⇒ self<br>wrapInner(function(index){ … })   ⇒ self v1.0+<br>将每个元素中的内容包裹在一个单独的结构中。结构可以是单个元件或多个嵌套元件，并且可以通过在作为HTML字符串或DOM节点，或者是一个生成用来包元素的回调函数，这个函数返回前两种类型的包裹片段。</div></p>
+<p>// wrap the contents of each navigation link in a span:<br>$(‘nav a’).wrapInner(‘<span>‘)</span></p>
+<p>// wrap the contents of each list item in a paragraph and emphasis:<br>$(‘ol li’).wrapInner(‘</p><p><em></em></p>‘)<p></p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2017/11/04/学习文档3/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2017/11/04/学习文档3/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2017总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
